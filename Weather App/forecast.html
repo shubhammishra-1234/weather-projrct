@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Forecast - WeatherWise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forecast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <span>WeatherWise</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="forecast.html" class="active">Forecast</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="forecast-page">
+        <div class="forecast-header">
+            <h1>7-Day Weather Forecast</h1>
+            <div class="location-display">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Jamshedpur, India</span>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search for a city...">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </button>
+            </div>
+        </div>
+
+        <div class="forecast-container">
+            <div class="forecast-cards">
+                <div class="forecast-card active">
+                    <div class="forecast-date">
+                        <span class="day-name">Today</span>
+                        <span class="date">Apr 25</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-sun"></i>
+                        <div class="weather-desc">Clear sky</div>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">42°C</span>
+                        <span class="temp-low">35°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 5%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 11 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 0%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <span>Feels like: 38°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Tomorrow</span>
+                        <span class="date">Apr 26</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-sun"></i>
+                        <div class="weather-desc">Clear sky</div>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">44°C</span>
+                        <span class="temp-low">28°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 46%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 10 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 0%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <span>Feels like: 30°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Sunday</span>
+                        <span class="date">Apr 27</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <div class="weather-desc">Scattered clouds</div>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">42°C</span>
+                        <span class="temp-low">30°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 49%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 12 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 0%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <span>Feels like: 33°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Monday</span>
+                        <span class="date">Apr 28</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                        <div class="weather-desc">Overcast clouds</div>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">41°C</span>
+                        <span class="temp-low">28°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 41%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 4 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 0%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <span>Feels like: 30°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Tuesday</span>
+                        <span class="date">Apr 29</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <div class="weather-desc">Scattered clouds</div>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">39°C</span>
+                        <span class="temp-low">24°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 56%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 9 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 0%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <span>Feels like: 28°C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Wednesday</span>
+                        <span class="date">Apr 30</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                        <div class="weather-desc">Overcast clouds</div>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">37°C</span>
+                        <span class="temp-low">24°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 71%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 7 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 0%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-temperature-half"></i>
+                            <span>Feels like: 25°C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecast-chart-container">
+            <h2><i class="fa-solid fa-chart-line"></i> Temperature Trend</h2>
+            <div class="chart-wrapper">
+                <canvas id="tempChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WeatherWise. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="forecast.js"></script>
+</body>
+
+</html> 
